@@ -17,7 +17,7 @@ const PaymentScreen = () => {
     }
   }, [navigate, shippingAddress]);
 
-  const [paymentMethod, setPaymentMethod] = useState('PayPal');
+  const [paymentMethod, setPaymentMethod] = useState('Cash On Delievry');
 
   const dispatch = useDispatch();
 
@@ -38,22 +38,11 @@ const PaymentScreen = () => {
             <Form.Check
               className='my-2'
               type='radio'
-              label='PayPal or Credit Card'
-              id='PayPal'
+              label='Cash On Delievry'
+              id='Cash On Delievry'
               name='paymentMethod'
-              value='PayPal'
-              checked={paymentMethod === 'PayPal'}
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check>
-
-            <Form.Check
-              className='my-2'
-              type='radio'
-              label='Cash on Delivery'
-              id='CashOnDelivery'
-              name='paymentMethod'
-              value='CashOnDelivery'
-              checked={paymentMethod === 'CashOnDelivery'}
+              value='Cash On Delievry'
+              checked
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
           </Col>
